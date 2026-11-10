@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = ["crates/fca-core", "crates/fca-store", "crates/fca-import", "crates/fca-cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+[workspace.dependencies]
+fca-core = { path = "crates/fca-core" }
+fca-store = { path = "crates/fca-store" }
+fca-import = { path = "crates/fca-import" }
+
+anyhow = "1"
+assert_cmd = "2"
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+clap = { version = "4", features = ["derive", "env"] }
+comfy-table = "7"
+csv = "1"
+directories = "6"
+encoding_rs = "0.8"
+serde = { version = "1", features = ["derive"] }
+sha2 = "0.10"
+sqlx = { version = "0.8", default-features = false, features = ["runtime-tokio", "sqlite", "migrate", "chrono", "macros"] }
+tempfile = "3"
+thiserror = "2"
+tokio = { version = "1", features = ["rt", "macros"] }
+toml = "0.8"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }

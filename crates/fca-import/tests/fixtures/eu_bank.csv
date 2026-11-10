@@ -1,0 +1,6 @@
+Buchungstag;Wertstellung;Buchungstext;Verwendungszweck;Beguenstigter/Zahlungspflichtiger;Betrag;Waehrung
+01.10.2026;01.10.2026;Dauerauftrag;Miete Oktober;Müller Hausverwaltung;-950,00;EUR
+05.10.2026;05.10.2026;Gutschrift;Gehalt Oktober;Beispiel GmbH;2.500,00;EUR
+07.10.2026;07.10.2026;Kartenzahlung;Brötchen und Gebäck;Bäckerei Schröder;-3,50;EUR
+07.10.2026;07.10.2026;Kartenzahlung;Brötchen und Gebäck;Bäckerei Schröder;-3,50;EUR
+12.10.2026;12.10.2026;Überweisung;Rückerstattung Strom;Stadtwerke Köln;1.234,56;EUR

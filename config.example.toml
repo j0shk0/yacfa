@@ -1,0 +1,28 @@
+# Example yafca config. Copy to ~/.config/yafca/config.toml (or pass --config).
+# Every key is optional.
+
+# Database file or sqlite: URL. Overridden by --db and $YAFCA_DB.
+# Default: $XDG_DATA_HOME/yafca/yafca.db
+# database_url = "/home/me/finance/yafca.db"
+
+# Used when a command does not say account: / currency:.
+# default_account = "giro"
+# default_currency = "EUR"
+
+# Import profiles: one table per bank export format.
+# Usage: fca import statement.csv --profile mybank [--dry-run]
+[import.profiles.mybank]
+delimiter = ";"
+encoding = "windows-1252"
+skip_rows = 0                    # lines to drop before the header row
+date_format = "%d.%m.%Y"         # chrono format
+decimal_separator = ","
+thousands_separator = "."        # omit if amounts have no grouping
+account = "Girokonto"
+labels = ["imported"]            # added to every row
+
+[import.profiles.mybank.columns]
+date = "Buchungstag"
+amount = "Betrag"                # or: debit = "..." and credit = "..."
+payee = "Beguenstigter/Zahlungspflichtiger"
+description = ["Verwendungszweck", "Buchungstext"]   # joined with " / "
